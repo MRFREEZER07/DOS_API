@@ -8,8 +8,8 @@ require($_SERVER['DOCUMENT_ROOT'] . '/api/vendor/autoload.php');
 
 
 require_once "Database.class.php";
-require_once "/var/www/html/PHPMailer/src/PHPMailer.php";
-require_once "/var/www/html/PHPMailer/src/SMTP.php";
+require_once "/var/www/html/DOSAPI/PHPMailer/src/PHPMailer.php";
+require_once "/var/www/html/DOSAPI/PHPMailer/src/SMTP.php";
 
 require_once "Database.class.php";
 

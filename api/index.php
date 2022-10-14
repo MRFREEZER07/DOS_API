@@ -142,7 +142,7 @@ class API extends REST
 
 
 
-    private function test()
+    public function test()
     {
         $data = $this->json(getallheaders());
         $this->response($data, 200);

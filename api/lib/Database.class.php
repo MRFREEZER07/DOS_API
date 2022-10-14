@@ -6,7 +6,8 @@ class Database
 
     public static function get_connection()
     {
-        $config_json = file_get_contents($_SERVER['DOCUMENT_ROOT'].'../../env.json');
+        $config_json = file_get_contents('/var/www/env.json');
+        
         $config = json_decode($config_json, true);
         if (Database::$db != null) {
             return Database::$db;
