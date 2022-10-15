@@ -5,6 +5,8 @@ require_once("lib/Database.class.php");
 require_once("lib/Signup.class.php");
 require_once("lib/Auth.class.php");
 require_once("lib/User.class.php");
+require_once "lib/Functionality.class.php";
+require_once "lib/UserMonitor.class.php";
 class API extends REST
 {
     public $data = "";
@@ -71,6 +73,7 @@ class API extends REST
             if (isset($_GET['namespace'])) {
                 $dir = $_SERVER['DOCUMENT_ROOT'].'/api/apis/'.$_GET['namespace'];
                 $file = $dir.'/'.$func.'.php';
+                //print($file);
                 if (file_exists($file)) {
                     include $file;
                     $this->current_call = Closure::bind(${$func}, $this, get_class());

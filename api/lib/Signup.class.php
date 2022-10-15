@@ -77,7 +77,7 @@ class Signup
 
     public function sendVerificationMail()
     {
-        $config_json = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '../../env.json');
+        $config_json = file_get_contents('/var/www/env.json');
         $config = json_decode($config_json, true);
         $smtp_pass = $config['smtp_pass'];
 
@@ -109,7 +109,7 @@ class Signup
         try {
             $mail->send();
         } catch (Exception $e) {
-            echo 'Caught exception: '. $e->ErrorInfo() ."\n";
+            echo 'Caught exception: '. $e ."\n";
         }
     }
 
