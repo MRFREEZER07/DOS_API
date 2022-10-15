@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "ed3ad913-659d-4f81-aa08-76f0a01b97a2",
+		"name": "DOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18551105"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "a.a056470522ab700aaa07b2caf2639c598d4b0e7bcf25446de73a58c78fc980fe",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://kbgrunt.selfmade.lol/api/auth/login?username=justin&password=karthik",
+					"protocol": "https",
+					"host": [
+						"kbgrunt",
+						"selfmade",
+						"lol"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "justin"
+						},
+						{
+							"key": "password",
+							"value": "karthik"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kbgrunt.selfmade.lol/api/auth/signup",
+					"protocol": "https",
+					"host": [
+						"kbgrunt",
+						"selfmade",
+						"lol"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "joinattack",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "requestattack",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "viewongoingattack",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "user attacklog",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

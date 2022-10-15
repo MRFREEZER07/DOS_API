@@ -21,15 +21,13 @@ class UserMonitor
             }
             //print_r($data);
         return $data;
-                  
-    } 
+        }
         else{
             print("error in insertion");
         }
-    }
+                  
+    } 
 
-    public function viewPreviousAttacks()
-    {
-
-    }
 }
+
+   
