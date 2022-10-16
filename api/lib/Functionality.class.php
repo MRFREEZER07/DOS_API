@@ -73,6 +73,26 @@ public function viewOnGoingAttacks()
         return false;
         throw new Exception("NoDataFound");
     }
+}
+public function viewRequestedAttack()
+{
+ $query ="SELECT * FROM `attackRequests`;";
+ $result =mysqli_query($this->db, $query);
+ if($result->num_rows>0)
+ {
+    $data =[];
+    while($row = $result->fetch_assoc())
+    {
+        array_push($data,$row);
+    }
+    return $data;
+ }else
+    {
+    return false;
+    throw new Exception("NoDataFound");
+     }
+
+}
 
 }
 
@@ -80,5 +100,5 @@ public function viewOnGoingAttacks()
 
 
 
-}
+
 
